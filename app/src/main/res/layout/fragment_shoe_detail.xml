@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
+    </data>
+
+    <!-- This layout is a little more complex because it has views aligned next to each other
+     and to avoid having a ViewGroup inside the other, it is better to use ConstraintLayout. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_wide">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shoe_name_label"
+            style="@style/normal_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_shoe_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={shoe.name}"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shoe_size_label"
+            style="@style/normal_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_shoe_name" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_shoe_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="@={shoe.size}"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_label" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shoe_company_label"
+            style="@style/normal_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_company_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_shoe_size" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_shoe_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={shoe.company}"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_company_label" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shoe_description_label"
+            style="@style/normal_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_description_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_shoe_company" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_shoe_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={shoe.description}"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_description_label" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double_wide"
+            android:backgroundTint="@color/cancelBackground"
+            android:text="@string/cancel_text"
+            app:layout_constraintEnd_toStartOf="@+id/save_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_shoe_description" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double_wide"
+            android:backgroundTint="@color/saveBackground"
+            android:text="@string/save_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@id/edt_shoe_description" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

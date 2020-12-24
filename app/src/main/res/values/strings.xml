@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_text">E-mail</string>
+    <string name="password_text">Password</string>
+    <string name="wolf_store_text">Wolf Store</string>
+    <string name="register_text">Register</string>
+    <string name="log_in_text">log in</string>
+    <string name="welcome_user">Welcome User</string>
+    <string name="welcome_text">At Wolf Store, we hope you find the perfect shoe for you.</string>
+    <string name="go_on_text">go on</string>
+    <string name="instruction_one_text">The main screen will show the user all registered shoes.</string>
+    <string name="instruction_two_text">To add a shoe, just click on the FloatingActionButton located at the bottom right of the screen and fill in the data on the next screen.</string>
+    <string name="see_models_text">see models</string>
+
+    <string name="shoe_name_text">Shoe name: %s</string>
+    <string name="shoe_size_text">Shoe size: %.1f</string>
+    <string name="shoe_company_text">Company: %s</string>
+    <string name="shoe_description_text">Description: %s</string>
+
+    <string name="shoe_name_label">Shoe Name</string>
+    <string name="shoe_size_label">Size</string>
+    <string name="shoe_company_label">Company</string>
+    <string name="shoe_description_label">Description</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="save_text">Save</string>
+    <string name="login_title">Login</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="Instructions_title">Instructions</string>
+    <string name="shoes_list_title">Shoes List</string>
+    <string name="shoe_register_title">Shoe Register</string>
+    <string name="inputs_error">Invalide values</string>
+</resources>

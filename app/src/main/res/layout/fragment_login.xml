@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- This layout is a little more complex because it has views aligned next to each other
+     and to avoid having a ViewGroup inside the other, it is better to use ConstraintLayout. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_double_wide">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double_wide"
+            android:text="@string/wolf_store_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/email_text"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="@string/email_text"
+            app:layout_constraintStart_toStartOf="@+id/edt_email"
+            app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+        <TextView
+            android:id="@+id/password_text"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:text="@string/password_text"
+            app:layout_constraintStart_toStartOf="@id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_text" />
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:text="@string/register_text"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_wide"
+            android:text="@string/log_in_text"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="@+id/edt_password"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
